@@ -1,0 +1,27 @@
+/////////////////////////////////////////////////////
+
+                    PROYECTO METIS
+
+////////////////////////////////////////////////////
+
+Install:
+
+composer create-project laravel/laravel project-metis
+
+npm install
+
+composer require laravel/jetstream
+
+php artisan jetstream:install inertia --teams
+
+npm install
+npm run build
+php artisan migrate
+
+composer require spatie/laravel-permission
+
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+php artisan migrate
+
+php artisan make:seeder RolesSeeder
